@@ -45,9 +45,17 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Credits
 
 ## Development environment
+* If it's your first time, run these commands in the terminal to make sure you installed all the necessary packages.
+```
+// ./troupe
+npm install
+cd client
+npm install
+cd ..
+```
 * To start the server locally.
 ```
-// ./troupe/
+// ./troupe
 // 1st console tab (backend/node).
 npm run server
 // 2nd console tab (frontend/react).
