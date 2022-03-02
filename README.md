@@ -11,7 +11,7 @@
 * [Credits](#credits)
 
 ## Introduction
-Do you like traveling with a group of friends?  
+Do you like traveling with a group of friends?
 
 
 Using Troupe, you’ll be able to:
@@ -44,3 +44,12 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Credits
 
+## Development environment
+* To start the server locally.
+```
+// ./troupe/
+// 1st console tab (backend/node).
+npm run server
+// 2nd console tab (frontend/react).
+npm run start
+```
