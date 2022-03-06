@@ -4,6 +4,7 @@
   "description": "<h1 align=\"center\">Troupe 🧳  ✈️</h1> <h3 align=\"center\">Plan with friends, without stress</h3>",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm install --prefix ./client && npm run build --prefix ./client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "client": "npm start --prefix ./client",
