@@ -1,5 +1,5 @@
 // server/index.js
-
+const path = require("path");
 const express = require("express");
 
 const PORT = process.env.PORT || 3001;
@@ -14,6 +14,12 @@ app.get("/api/sample", (req, res) => {
 app.post("/api/register", (req, res) => {
   console.log(`[${Date()}] /api/register being called ==>`);
   res.json({ result: true, timeStamp: Date() });
+});
+
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 app.listen(PORT, () => {
