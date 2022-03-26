@@ -34,9 +34,8 @@ This app is made with love by [Aidan](https://github.com/AidanFournier), [Spence
 
 
 ## URL
-<!-- [Midorin's website](https://www.midorin.one/)  -->
+[Troupe's website](https://troupe.herokuapp.com/) (under construction)
 
-Available soon.
 
 
 ## Contributing
