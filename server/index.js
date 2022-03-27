@@ -1,29 +1,29 @@
 // server/index.js
 const path = require("path");
 const express = require("express");
+const { MongoClient } = require("mongodb");
 require('dotenv').config();
 
-const { MongoClient } = require("mongodb");
- 
-// Replace the following with your Atlas connection string
-const url = process.env.ATLAS_URI;
-const client = new MongoClient(url);
-
-async function run() {
-    try {
-        await client.connect();
-        console.log("Connected to MongoDB Atlas");
-
-    } catch (err) {
-        console.log("Cant connect");
-        console.log(err.stack);
-    }
-    finally {
-        await client.close();
-    }
+async function connectDB(){
+  const url = process.env.ATLAS_URI;
+  const client = new MongoClient(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
+  try{
+    await client.connect();
+    console.log("Connection to MongoDB successful");
+  } catch (e){
+    console.log("Cannot connect to MongoDB");
+    console.error(e);
+  } finally {
+    await client.close();
+  }
 }
 
-run().catch(console.dir);
+connectDB().catch(console.error);
+
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
