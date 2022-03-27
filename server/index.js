@@ -1,28 +1,10 @@
 // server/index.js
 const path = require("path");
 const express = require("express");
-const { MongoClient } = require("mongodb");
-require('dotenv').config();
+const connectDB = require("./config/db.js");
 
-async function connectDB(){
-  const url = process.env.ATLAS_URI;
-  const client = new MongoClient(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  });
-  try{
-    await client.connect();
-    console.log("Connection to MongoDB successful");
-  } catch (error){
-    console.log("Cannot connect to MongoDB");
-    console.error(error);
-  } finally {
-    await client.close();
-  }
-}
-
-connectDB().catch(console.error);
-
+// Connect Database
+connectDB();
 
 const PORT = process.env.PORT || 3001;
 
