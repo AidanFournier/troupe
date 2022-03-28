@@ -21,7 +21,8 @@ Using Troupe, you’ll be able to:
 * Create a travel book of photos
 
 
-This app is made with love by [Aidan](https://github.com/AidanFournier), [Spencer](https://github.com/Smattison0830), [Allen ](https://github.com/kochapas) and [Mylene ](https://github.com/Ren33000), former classmates of Le Wagon Tokyo.
+This app is made with love by [Aidan](https://github.com/AidanFournier), [Spencer](https://github.com/Smattison0830), [Shogo](https://github.com/80andAbove), [Allen ](https://github.com/kochapas) and [Mylene ](https://github.com/Ren33000), former classmates of Le Wagon Tokyo.
+
 
 
 ## Technologies
@@ -34,9 +35,8 @@ This app is made with love by [Aidan](https://github.com/AidanFournier), [Spence
 
 
 ## URL
-<!-- [Midorin's website](https://www.midorin.one/)  -->
+[Troupe's website](https://troupe.herokuapp.com/) (under construction)
 
-Available soon.
 
 
 ## Contributing

@@ -1,6 +1,10 @@
 // server/index.js
 const path = require("path");
 const express = require("express");
+const connectDB = require("./config/db.js");
+
+// Connect Database
+connectDB();
 
 const PORT = process.env.PORT || 3001;
 
@@ -25,3 +29,4 @@ app.get("/*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
+
