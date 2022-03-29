@@ -12,17 +12,9 @@ const tripSchema = new Schema({
     },
     startDate: {
         type: Date,
-        validate: function(input){
-            return typeof new Date(input) === 'date' && new Date(input) >= new Date();
-        },
-        message: input => `${input} must be greater than or equal to the current date!`
     },
     endDate:{
         type: Date,
-        validate: function(input){
-            return typeof new Date(input) === 'date' && new Date(input) >= new Date();
-        },
-        message: input => `${input} must be greater than or equal to the current date!`
     },
 });
 
