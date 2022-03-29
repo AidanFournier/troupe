@@ -12,7 +12,7 @@ const photoSchema = new Schema({
     },
     img_url: {
         type: String,
-        required: false,
+        required: true,
     },
 });
 
