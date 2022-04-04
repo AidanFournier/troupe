@@ -2,8 +2,8 @@
 const path = require("path");
 const express = require("express");
 const connectDB = require("./config/db.js");
-const userRouter = require("./routes/user.js");
-const tripRouter = require("./routes/trips.js");
+const userRouter = require("./routes/api/user.js");
+// const tripRouter = require("./routes/api/trips.js");
 
 // Connect Database
 connectDB();
@@ -24,7 +24,7 @@ app.post("/api/register", (req, res) => {
 
 app.use(express.json());
 app.use('/api/user', userRouter);
-app.use('/api/trip', tripRouter);
+// app.use('/api/trip', tripRouter);
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 
