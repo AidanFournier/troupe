@@ -2,6 +2,7 @@
 const path = require("path");
 const express = require("express");
 const connectDB = require("./config/db.js");
+const userRouter = require("./routes/user.js");
 
 // Connect Database
 connectDB();
@@ -19,6 +20,9 @@ app.post("/api/register", (req, res) => {
   console.log(`[${Date()}] /api/register being called ==>`);
   res.json({ result: true, timeStamp: Date() });
 });
+
+app.use(express.json());
+app.use('/api/user', userRouter);
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 
