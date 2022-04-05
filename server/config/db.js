@@ -9,9 +9,12 @@ const connectDB = async () => {
             useUnifiedTopology: true
         })
         .then((data) => {
-            console.log(`MongoDB connected with server: ${data.connection.host}`)
+            console.log('MongoDB connection successful');
+            console.log(`MongoDB connected with server: ${data.connection.host}`);
+        })
+        .catch((error) => {
+            console.log(`Error: ${error}`);
         });
-
 };
 
 module.exports = connectDB;
