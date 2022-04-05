@@ -17,4 +17,9 @@ const registerUser = async (req, res) => {
     }    
 }
 
+// Login 
+const loginUser = async (req, res) => {
+    const loginCredentials = req.body;
+}
+
 module.exports = { registerUser };

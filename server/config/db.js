@@ -13,14 +13,5 @@ const connectDB = async () => {
         });
 
 };
-//     try {
-//         await client.connect();
-//         console.log('Connection to MongoDB successful');
-//     } catch (error) {
-//         console.log("Cannot connect to MongoDB");
-//         console.log(error);
-//     } finally{
-//         await client.close();
-//     }
-// };
+
 module.exports = connectDB;
