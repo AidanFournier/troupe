@@ -9,10 +9,20 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import NotFound from './pages/NotFound';
 import './App.css';
+import { Security, SecureRoute, ImplicitCallBack } from '@okta/okta-react'
+
+function onAuthRequired({history}){
+  history.push('/login');
+}
 
 function App() {
   return (
     <Router>
+      <Security issuer='https://dev-60590736.okta.com/oauth2/default'
+                client_id=''
+                redirect_url={window.location.origin + '/authorization-code/callback'}
+                onAuthRequired={onAuthRequired}>
+
       <div>
         <Switch>
           {/* Example of the Route for the specific instance */}
@@ -34,6 +44,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      </Security>
     </Router>
   );
 }
