@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/AidanFournier/troupe#readme",
   "dependencies": {
+    "@okta/okta-react": "^6.4.3",
+    "@okta/okta-signin-widget": "^6.2.1",
     "axios": "^0.26.0",
     "colors": "^1.4.0",
     "concurrently": "^7.0.0",
