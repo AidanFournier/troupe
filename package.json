@@ -9,7 +9,7 @@
     "start": "concurrently \"npm run client\" \"npm run server\"",
     "client": "npm start --prefix ./client",
     "server": "node server/index.js",
-    "lint": "eslint --no-error-on-unmatched-pattern 'src/**/*'"
+    "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
@@ -52,7 +52,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint"
     }
   },
   "lint-staged": {
