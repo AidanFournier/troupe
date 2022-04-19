@@ -35,8 +35,21 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
     "nodemon": "^2.0.15",
     "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,html}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   }
 }

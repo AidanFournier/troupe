@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom';
-import Home from './pages/Home';
-import Register from './pages/Register';
-import NotFound from './pages/NotFound';
-import './App.css';
+} from "react-router-dom";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
+import "./App.css";
 
 function App() {
   return (
